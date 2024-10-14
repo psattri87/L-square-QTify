@@ -1,0 +1,14 @@
+.faqsBox {
+  height: 345px;
+  width: 1135px;
+  display: flex;
+  flex-direction: column;
+  margin: 33px 0;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 50px;
+}

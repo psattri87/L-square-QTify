@@ -1,0 +1,22 @@
+.heroImg {
+  height: 100%;
+}
+.heroBox {
+  height: 212px;
+  width: 799px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.heroSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+  width: 100%;
+}
+.heroText{
+    font-size: 32px;
+    text-align: center;
+}

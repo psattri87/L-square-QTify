@@ -1,0 +1,63 @@
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.gridContainer {
+  width: 100%;
+  gap: 20px 40px;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0 12px;
+
+}
+
+.borderBottom {
+  margin-left: -27px;
+  margin-top: 20px;
+  width: 1440px;
+  border-bottom: 1px solid var(--base-color);
+}
+
+.name {
+  font-size: var(--font-size-lg);
+}
+
+.tabs {
+  display: flex;
+  width: 331px;
+  height: 34px;
+}
+
+.tabs div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  padding: 0px 5px;
+}
+
+.tabs div:hover {
+  cursor: pointer;
+  div {
+    background-color: var(--base-color);
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+  }
+}
+
+.carouselToggleButton {
+  color: var(--base-color);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+}
+
+.textButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,84 @@
+.playerBox {
+  display: flex ;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1440px;
+  height: 130px;
+  gap: 20px;
+  background-color: var(--background-color);
+  padding: 24px 0;
+  border: 1px solid;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 750px;
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+.playerSongCard {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  width: 300px;
+  height: 82px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 0 auto; */
+}
+
+.slider {
+  /* margin:0; */
+  width: 676px;
+  height: 6px;
+  color: var(--base-color);
+}
+
+.button {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 6px;
+}
+
+.imageBox {
+  height: 82px;
+  width: 100.85px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  img {
+    height: 100%;
+    width: 75.85px;
+    object-fit: cover;
+  }
+}
+
+.contentBox {
+  height: 82px;
+  width: 100%;
+  margin: 10px 0px 10px 8.15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow:hidden;
+  h4 {
+    margin:2px 0;
+    text-wrap: nowrap;
+    font-size: var(--font-size-md);
+  }
+  h5 {
+    margin:2px 0;
+    text-wrap: nowrap;
+    font-size: var(--font-size-xs-2);
+  }
+}
