@@ -23,7 +23,13 @@ const Controls = ({ data }) => {
   return <></>;
 };
 
+function SlideNextButton() {
+  const swiper = useSwiper();
+  swiper.slideNext();
+}
+
 export default function Carousel({ data, type }) {
+  const swiper = useSwiper();
   const { setSong } = useContext(ApiContext);
   setSong(data[0])
   const handleSongClick = (song) => {
@@ -42,10 +48,10 @@ export default function Carousel({ data, type }) {
         slidesPerView={7}
         // navigation
         navigation={{
-          prevEl: ".swiper-button-next",
-          nextEl: ".swiper-button-prev",
+          prevEl: ".swiperButtonNext",
+          nextEl: ".swiperButtonPrev",
         }}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
         className={styles.swiper}
       >
@@ -56,15 +62,15 @@ export default function Carousel({ data, type }) {
             </SwiperSlide>
           );
         })}
+      </Swiper>
         <div className={styles.swiperButtons}>
-          <div className={styles.swiperButtonPrev}>
+          <div className={styles.swiperButtonPrev} onClick={()=>console.log("clicked previous button")}>
             <LeftArrow />
           </div>
-          <div className={styles.swiperButtonNext}>
+          <div className={styles.swiperButtonNext} onClick={SlideNextButton}>
             <RightArrow />
           </div>
         </div>
-      </Swiper>
     </div>
   );
 }

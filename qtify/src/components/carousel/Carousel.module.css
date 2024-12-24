@@ -1,12 +1,13 @@
 .carousel {
   width: 100%;
-  height: 100%;
-  padding: 0px 12px;
+  height: 232px;
+  border: 1px solid;
 }
 
 .swiper {
-  width: 100%;
-  /* left:20px; */
+  width: 1353px;
+  height: 100%;
+  border: 1px solid;
 }
 
 .swiperSlider {
@@ -14,15 +15,14 @@
   background: var(--color-white);
 
   /* Center slide text vertically   */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center;  */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 .swiperButtons {
-  position: absolute;
-  top: 40%;
-  /* left:-10px; */
-  width: 100%;
+  position: relative;
+  bottom: 150px;
+  width: 1383px;
   display: flex;
   justify-content: space-between;
   z-index: 1;
@@ -32,6 +32,11 @@
 .swiperButtonPrev {
   font-size: 32px;
   color: var(--base-color);
+}
+.swiperButtonNext:after,
+.swiperButtonPrev:after {
+  /* left:20px;
+  right:20px; */
 }
 
 .swiper-button-next:after,

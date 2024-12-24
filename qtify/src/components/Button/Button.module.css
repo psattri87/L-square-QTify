@@ -1,8 +1,8 @@
 .button {
   background-color: var(--color-black);
-  color: var(--color-primary);
   border-radius: 12px;
   font-size: 18px;
   padding: 10px 16px;
   cursor: pointer;
+  color: var(--base-color);
 }
