@@ -5,7 +5,7 @@ const ApiContext = createContext();
 
 const ApiState = (props) => {
   const urls = {
-    newAlbum: "https://qtify-backend-labs.crio.do/albums/top",
+    newAlbum: "https://qtify-backend-labs.crio.do/albums/new",
     topAlbum: "https://qtify-backend-labs.crio.do/albums/top",
     songs: "https://qtify-backend-labs.crio.do/songs",
   };
