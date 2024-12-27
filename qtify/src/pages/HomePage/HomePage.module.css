@@ -2,27 +2,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1440px;
+  width: var(--app-width);
   background-color: var(--color-black);
   margin-top: var(--nav-height);
-  /* border: 1px solid; */
+  border: 1px solid;
 }
 
 .albumsContainer {
-  width: 1384px;
+  width: 100%;
   display: flex;
   gap: 32px;
   flex-direction: column;
   margin-bottom: 20px;
-  /* border: 1px solid; */
+  align-items: center;
 }
 
 .songsContainer {
   height: 381px;
-  width: 1384px;
+  width: var(--app-width);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid var(--base-color);
   padding: 20px 0px;
 }

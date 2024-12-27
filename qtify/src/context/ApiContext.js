@@ -8,9 +8,9 @@ const ApiState = (props) => {
     newAlbum: "https://qtify-backend-labs.crio.do/albums/new",
     topAlbum: "https://qtify-backend-labs.crio.do/albums/top",
     songs: "https://qtify-backend-labs.crio.do/songs",
+    genres: "https://qtify-backend-labs.crio.do/genres"
   };
   const [data, setData] = useState({});
-  // const [count, setCount] = useState(0);
   const [song, setSong] = useState({});
 
   const generateData = async (key, url) => {
@@ -35,6 +35,7 @@ const ApiState = (props) => {
       generateData("topAlbum", urls.topAlbum);
       generateData("newAlbum", urls.newAlbum);
       generateData("songs", urls.songs);
+      generateData("genres", urls.genres);
     };
     getData();
     // eslint-disable-next-line

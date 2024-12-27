@@ -1,10 +1,8 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-// import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { ReactComponent as LeftArrow } from "../../assets/LeftArrow.svg";
 import { ReactComponent as RightArrow } from "../../assets/RightArrow.svg";
-// import { PiCaretCircleRightFill } from "react-icons/pi";
 import styles from "./Carousel.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,22 +12,13 @@ import { ApiContext } from "../../context/ApiContext";
 
 import Card from "../card/Card";
 
-// const Controls = ({ data }) => {
-//   const swiper = useSwiper();
-//   useEffect(() => {
-//     swiper.slideTo(7);
-//     // eslint-disable-next-line
-//   }, [data]);
-//   return <></>;
-// };
-
 export default function Carousel({ data, type }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { setSong } = useContext(ApiContext);
   const sliderRef = useRef(null);
   const swiperRef = useRef();
+
   
-  setSong(data[0]);
   const handleSongClick = (song) => {
     setSong(song);
   };
@@ -65,13 +54,16 @@ export default function Carousel({ data, type }) {
       >
         {data.map((song) => {
           return (
-            <SwiperSlide id={song.id} onClick={() => handleSongClick(song)}>
+            <div key={song.id}>
+            <SwiperSlide id={song.id} onClick={(song) => handleSongClick(song)}>
               <Card data={song} type={type} />
             </SwiperSlide>
+
+            </div>
           );
         })}
       </Swiper>
-      <div className={styles.swiperButtons}>
+      <div >
         <div className={styles.swiperButtonPrev} onClick={handlePrevious}>
           <LeftArrow />
         </div>

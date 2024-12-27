@@ -9,7 +9,6 @@ export default function Player() {
   const [pause, setPause] = useState(false);
   const { song } = useContext(ApiContext);
   const { image, title, durationInMs } = song;
-  console.log(image);
 
   return (
     <>
